@@ -1,0 +1,101 @@
+/*CONFIGURACION GENERAL*/
+:root{
+    --cPrimario: blueviolet;
+    --cSecundario:green;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+}
+ /*  CONFIGURACION MENU RESPONSIVO  */
+.responsive-menu-top{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    margin-bottom: 30px;
+    display:flex;
+    justify-content: center;
+    background-color: var(--cPrimario);
+    height: 50px;
+    border-bottom: var(--cSecundario) solid 5px;
+}
+.responsive-menu-top nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 5px;
+    width: 800px;
+    height: auto;
+    align-items: center;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+/*  OCULTAR ENLACES Y MOSTRAR BOTON CON PANTALLA MENOR A 500PX*/
+@media (max-width: 500px) {
+    .responsive-menu-top nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .responsive-menu-top img,
+    .responsive-menu-top a{
+        display: none;
+    }
+    .responsive-menu-top{
+        height: fit-content;
+    }
+    .responsive-menu-top button{
+        display: block!important;
+        margin-left: 20px;
+
+    }
+}
+.responsive-menu-top a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+.responsive-menu-top div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.responsive-menu-top img{
+    margin-top: 37px;
+    padding: 2px;
+    background-color: white;
+    border-radius: 100px;
+    border: solid 5px var(--cSecundario);
+    
+}
+.responsive-menu-top button{
+    display: none;
+    background-color: var(--cPrimario);
+    padding: 5px 10px;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+.responsive-menu-top button i{
+    color: white;
+}
+
+/*  CLASE PARA MOSTRAR OPCIONES OCULTAS  */
+.responsive-menu-top .toggle-menu a{
+    display: block;
+    padding-top:15px;
+    text-align: center;
+}
+/*CONFIGURACION DE PRUEBA DE COMPORTAMIENTO, ES ELIMINABLE*/
+
+body{
+    height: 3000px;
+}
+h1{
+    text-align: center;
+}
