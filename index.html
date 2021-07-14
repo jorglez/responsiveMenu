@@ -17,7 +17,7 @@
             <button onclick="showmenu()"><i class="fas fa-bars fa-2x"></i></button>
             <a href="">Nosotros</a>
             <a href="">Contacto</a>
-            <div>
+            <div class="logo-div">
                 <img src="img/logo.png" alt="logo" width="80px">
             </div>
             <a href="">Mascotas</a>
@@ -31,11 +31,18 @@
     <footer>
 <script>
     function showmenu() {
-        const navBar = document.querySelector('.responsive-menu-top nav')
+        const navBar = document.querySelector('.responsive-menu-top nav'),
+            logo= document.querySelector('.logo-div'),
+            menu = document.querySelector('.responsive-menu-top nav')
         if(!navBar.classList.contains("toggle-menu")){
             navBar.classList.add("toggle-menu")
+            logo.style.display = "none"
+            menu.style.display = "block"
+
         }else{
             navBar.classList.remove("toggle-menu")
+            logo.style.display = "flex"
+            menu.style.display = "flex"
         }
     }
 </script>

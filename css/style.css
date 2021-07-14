@@ -39,10 +39,15 @@ html {
 /*  OCULTAR ENLACES Y MOSTRAR BOTON CON PANTALLA MENOR A 500PX*/
 @media (max-width: 500px) {
     .responsive-menu-top nav{
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: space-between;
     }
-    .responsive-menu-top img,
+    .responsive-menu-top nav div{
+        width: fit-content;
+    }
+    .responsive-menu-top img{
+        width: 60px;
+        margin-top: 0px!important;
+    }
     .responsive-menu-top a{
         display: none;
     }
@@ -86,6 +91,10 @@ html {
 }
 
 /*  CLASE PARA MOSTRAR OPCIONES OCULTAS  */
+
+.toggle-menu{
+    flex-direction: column;
+}
 .responsive-menu-top .toggle-menu a{
     display: block;
     padding-top:15px;
